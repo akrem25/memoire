@@ -1,0 +1,244 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+ }
+         
+ body{
+   font-family: Arial, sans-serif;
+   line-height: 1.5;
+   color: #1f1e1e;
+   background-color: #e9e9e9;
+ }
+ main section img {
+   width: 500px;
+   height: 200px;
+   place-items: center;
+ }
+ .logo{
+   vertical-align: center;
+   float: left;
+ }
+ .logo img {
+   height: 55px;
+   width: auto;
+   vertical-align: middle;
+   place-content: left;
+ }
+
+
+ @keyframes headerAnimation {
+           0% {background-color: #078A76;}
+           50% {background-color: #007362;}
+           100% {background-color: #078A76;}
+ }
+
+/* Styles de header */
+ header {
+   animation: headerAnimation 8s linear infinite;
+   background-color: #078A76;
+   padding: 20px;
+   display: flex;
+   place-content: center;
+   justify-content: space-between;
+   margin-bottom: 20px;
+ }
+
+/*barre de navigation  */
+ .nav-links{
+   height: 40px;
+   display: flex;
+   align-items: center;
+   background: #fff;
+   border-radius: 50px;
+   box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+   margin-top: 5px;
+ }
+ .nav-links li{
+   list-style: none;
+   margin: 0 15px;
+ }
+ .nav-links li a{
+   position: relative;
+   color: #333;
+   font-size: 20px;
+   font-weight: 500;
+   padding: 6px 0;
+   text-decoration: none;
+ }
+ .nav-links li a:before{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   height: 3px;
+   width: 0%;
+   background: #15cca4;
+   border-radius: 12px;
+   transition: all 0.5s ease;
+ }
+ .nav-links li a:hover:before{
+   width: 100%;
+   }
+ .nav-links li.center a:before{
+   left: 50%;
+   transform: translateX(-50%);
+ }
+
+ /*ajouter livres*/
+
+ .form-container {
+    height: auto;
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    display: flex; 
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #00000031;
+  }
+  
+  .form-container img {
+    height: 100px;
+    width: auto;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 15px; 
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input[type="text"],textarea{
+    width: 580px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 5px solid #078A76;
+    border-radius: 5px;
+    background-color: #b0cac096;
+  }
+  input[type="file"]{
+    padding: 10px 20px;
+    width: 280px;
+    background-color: #078A76;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  textarea {
+    height: 150px;
+  }
+  button[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #078A76;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background-color: #007362;
+  }
+  h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+  
+ /* block de livres*/
+ .afficher {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 960px;
+}
+
+.cadre {
+  width: 650px;
+  height: auto;
+  border-radius: 2%;
+  background-color: #fff;
+  display: flex;
+  transition: transform 0.3s ease;
+}
+.cadre:hover{
+  transform: scale(102%);
+}
+
+.cadre img {
+  width: 200px;
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  border-radius: 3%;
+}
+text {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+.contenu {
+  position: relative;
+  width: 370px;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  
+}
+.contenu p{
+  height: 170px;
+  width: 380px;
+}
+.acheter h3{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 20px;
+}
+/* Styles du pied de page */
+footer {
+  background-color: #078A76;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+ 
+ 
+ 

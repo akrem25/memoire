@@ -1,0 +1,136 @@
+  /* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #1f1e1e;
+    background-color: #e9e9e9;
+  }
+  @keyframes headerAnimation {
+    0% {
+      background-color: #078A76;
+    }
+    50% {
+      background-color: #007362;
+    }
+    100% {
+      background-color: #078A76;
+    }
+  }
+
+    /* Styles de header*/
+  .logo{
+    vertical-align: center;
+    float: left;
+  }
+  .logo img {
+    height: 55px;
+    width: auto;
+    vertical-align: middle;
+    place-content: left;
+  } 
+   header {
+    animation: headerAnimation 8s linear infinite;
+    background-color: #078A76;
+    padding: 20px;
+    display: flex;
+    place-content: center;
+    justify-content: space-between;
+  }
+
+  /* navigation barre */
+  .nav-links{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    margin-top: 5px;
+  }
+  .nav-links li{
+    list-style: none;
+    margin: 0 15px;
+  }
+  .nav-links li a{
+    position: relative;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+  }
+  .nav-links li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #15cca4;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+  }
+ .nav-links li a:hover:before{
+    width: 100%;
+  }
+  .nav-links li.center a:before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main h1 {
+    margin: 30px;
+    text-decoration: underline;
+    color: #333;
+  }
+    /*table de commende*/
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+  }
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1.5px solid #ccc;
+  }
+  table th {
+    background-color: #f5f5f5;
+  }
+  table tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+.button-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+.reset-button,.delete-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #078A76;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+  /* Styles du pied de page */
+footer {
+  background-color: #078A76;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
